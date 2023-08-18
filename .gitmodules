@@ -1,0 +1,3 @@
+[submodule "src/constantine"]
+	path = src/constantine
+	url = https://github.com/mratsim/constantine
