@@ -93,6 +93,9 @@ proc NewPreComputedWeights() : PrecomputedWeights =
 
    return PrecomputedWeightsObj
 
+proc BatchInversion(points : seq[ECP_TwEdwards_Prj[Fr[Bandersnatch]]]) : seq[ECP_TwEdwards_Prj[Fr[Bandersnatch]]] =
+ var result : array[len(points),ECP_TwEdwards_Prj[Fr[Bandersnatch]]]
+
 proc ComputeBaryCentricCoefficients( point : ECP_TwEdwards_Prj[Fr[Bandersnatch]]): seq[ECP_TwEdwards_Prj[Fr[Bandersnatch]]] =
  var lagrangeEval : array[DOMAIN, ECP_TwEdwards_Prj[Fr[Bandersnatch]]]
 
@@ -111,6 +114,7 @@ var totalProd : ECP_TwEdwards_Prj[Fr[Bandersnatch]]
 totalProd.x.setOne()
 totalProd.y.setOne()
 totalProd.z.setOne()
+
 
 
 
